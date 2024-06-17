@@ -4,7 +4,7 @@ import google.generativeai as genai
 
 # Set up the page configuration
 st.set_page_config(
-    page_title="eduequify-a q&a chatbot",
+    page_title="EduEquify->A q&a chatbot",
     page_icon="QA_logo.png",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -27,7 +27,7 @@ chat_session = model.start_chat(
         {
           "role": "model",
           "parts": [
-            "hello! Myself EQUIFY,the chat bot. How can I help you today?",
+            "hello! Myself EQUIFY, the chatbot. How can I help you today?",
           ],
         },
     ]
@@ -40,7 +40,7 @@ if "chat_history" not in st.session_state:
 # User interface setup
 col1, col2 = st.columns([1, 4])
 col1.image("QA_logo.png")
-col1.markdown("#eduequify")
+col1.markdown("#EduEquify")
 
 # Main chatbot section
 col2.title("Q&A Chatbot")
