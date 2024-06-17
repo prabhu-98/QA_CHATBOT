@@ -57,6 +57,7 @@ if button and question:
     st.session_state.chat_history.append({"role": "user", "parts": [question]})
     st.session_state.chat_history.append({"role": "model", "parts": [result.text]})
     st.write(result.text)
+    question = ""  # Clear the text input after submitting
 
 if st.session_state.chat_history:
     with st.expander("Chat History"):
