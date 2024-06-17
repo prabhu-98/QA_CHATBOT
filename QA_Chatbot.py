@@ -10,8 +10,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Load the environment and initialize the chatbot model
-configure()
+
 genai.configure(api_key=st.secrets["api_key"])
 model = genai.GenerativeModel("gemini-pro")
 
