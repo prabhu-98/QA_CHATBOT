@@ -29,6 +29,19 @@ chat_session = model.start_chat(
             "hello! Myself EQUIFY, the chatbot. How can I help you today?",
           ],
         },
+        
+        {
+          "role": "user",
+          "parts": [
+            "how can you help me?",
+          ],
+        },
+        {
+          "role": "model",
+          "parts": [
+            "my name is eduequify, i am a chatbot.i can help you to answer any questions.",
+          ],
+        },
     ]
 )
 
