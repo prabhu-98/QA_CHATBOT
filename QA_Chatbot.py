@@ -1,11 +1,6 @@
 import streamlit as st
 import google.generativeai as genai
-from dotenv import load_dotenv
-import os
 
-# Configure the environment and API key
-def configure():
-    load_dotenv()
 
 # Set up the page configuration
 st.set_page_config(
@@ -17,7 +12,7 @@ st.set_page_config(
 
 # Load the environment and initialize the chatbot model
 configure()
-genai.configure(api_key=os.getenv('api_key'))
+genai.configure(api_key=st.secrets["api_key"])
 model = genai.GenerativeModel("gemini-pro")
 
 # Start the initial chat session
@@ -44,14 +39,14 @@ if "chat_history" not in st.session_state:
 
 # User interface setup
 col1, col2 = st.columns([1, 4])
-col1.image(r"c:\users\prabhu das\downloads\eduequify-modified (1).png")
+col1.image("QA_logo.png")
 col1.markdown("#eduequify")
 
 # Main chatbot section
 col2.title("Q&A Chatbot")
 with col2.expander("About this app"):
     st.write("""
-                This is a chatbot that answers the questions of the students without any gender discriminations in the response. 😇
+                This chatbot answers the student's questions without any gender discrimination in the response. 😇
             """)
 
 # User input and chat history display
