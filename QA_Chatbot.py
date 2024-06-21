@@ -12,7 +12,7 @@ st.set_page_config(
 
 
 genai.configure(api_key=st.secrets["api_key"])
-model = genai.GenerativeModel("gemini-pro")
+model = genai.GenerativeModel("gemini-1.5-flash")
 
 # Start the initial chat session
 chat_session = model.start_chat(
